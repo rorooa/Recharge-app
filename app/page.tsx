@@ -15,7 +15,7 @@ export default function Home() {
   const [plans, setPlans] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/plans/Jio')
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/plans/Jio`)
       .then(res => res.json())
       .then(data => {
         if(Array.isArray(data)) {
