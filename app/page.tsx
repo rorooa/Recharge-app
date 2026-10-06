@@ -12,7 +12,7 @@ import {
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [plans, setPlans] = useState([]);
+  const [plans, setPlans] = useState<any[]>([]);
 
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/plans/Jio`)
